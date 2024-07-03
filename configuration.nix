@@ -116,6 +116,7 @@
     python312Packages.pip
     postman
     python312Packages.pytest
+    ranger
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
