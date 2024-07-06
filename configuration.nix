@@ -118,6 +118,8 @@
     python312Packages.pytest
     ranger
     docker
+    gh
+    gh-notify
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
