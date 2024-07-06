@@ -9,7 +9,7 @@
     dotfiles.url = "git@github.com:itsivali/.dotfiles.git";
   };
 
-  outputs = { self, nixpkgs, home-manager, .dotfiles, ... }: {
+  outputs = { self, nixpkgs, home-manager, dotfiles, ... }: {
     nixosConfigurations = {
       prague = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
