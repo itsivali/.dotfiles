@@ -6,7 +6,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
    
-    .dotfiles.url = "git@github.com:itsivali/.dotfiles.git";
+    dotfiles.url = "git@github.com:itsivali/.dotfiles.git";
   };
 
   outputs = { self, nixpkgs, home-manager, .dotfiles, ... }: {
