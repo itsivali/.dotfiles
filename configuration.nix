@@ -29,7 +29,7 @@
 
   # Enable systemd service to run garbage collection
   systemd.services.nix-gc = {
-    description = "Nix Garbage Collection";
+    description = lib.mkForce "Nix Garbage Collection";
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
@@ -38,7 +38,7 @@
   };
 
   systemd.timers.nix-gc = {
-    description = "Timer for Nix Garbage Collection";
+    description = lib.mkForce "Timer for Nix Garbage Collection";
     wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = "weekly";
