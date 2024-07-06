@@ -100,7 +100,7 @@
     mpv
     fastfetch
     filezilla
-    gnome.gnome-tweaks
+    gnome-tweaks
     htop
     obsidian
     cider
