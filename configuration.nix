@@ -23,11 +23,9 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Configure Nix garbage collection
-  nix.gc = {
-    automatic = true; # Enable automatic garbage collection
-    dates = "weekly"; # Run garbage collection weekly
-    options = "--delete-older-than 5d"; # Keep generations for 5 days
-  };
+  nix.gc.automatic = true; # Enable automatic garbage collection
+  nix.gc.dates = "weekly"; # Run garbage collection weekly
+  nix.gc.options = "--delete-older-than 7d"; # Keep generations for 7 days
 
   # Enable systemd service to run garbage collection
   systemd.services.nix-gc = {
@@ -37,6 +35,11 @@
       Type = "oneshot";
       ExecStart = "${pkgs.nix}/bin/nix-collect-garbage -d";
     };
+  };
+
+  systemd.timers.nix-gc = {
+    description = "Timer for Nix Garbage Collection";
+    wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = "weekly";
       Persistent = true;
