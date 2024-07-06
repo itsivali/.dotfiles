@@ -29,7 +29,7 @@
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.nix}/bin/nix-collect-garbage -d";
+      ExecStart = lib.mkForce "${pkgs.nix}/bin/nix-collect-garbage -d";
     };
   };
 
