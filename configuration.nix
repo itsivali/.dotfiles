@@ -127,7 +127,7 @@
     obsidian
     cider
     localsend
-    notion-app-enhanced
+    bluemail
     glib
     gtk4
     nixpkgs-fmt
@@ -142,6 +142,8 @@
     docker
     gh
     gh-notify
+    anydesk
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -158,8 +160,8 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ 80 443 ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+   networking.firewall.allowedTCPPorts = [ 80 443 53317 ];
+   networking.firewall.allowedUDPPorts = [ 80 443 53317 ];
   # Or disable the firewall altogether.
   networking.firewall.enable = true;
 
