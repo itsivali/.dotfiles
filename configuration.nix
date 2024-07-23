@@ -143,6 +143,7 @@
     gh
     gh-notify
     anydesk
+    github-desktop
 
   ];
 
