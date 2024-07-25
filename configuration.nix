@@ -144,6 +144,7 @@
     gh-notify
     anydesk
     github-desktop
+    wpsoffice
 
   ];
 
