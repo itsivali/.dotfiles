@@ -9,15 +9,14 @@
   home.username = "willis";
   home.homeDirectory = "/home/willis";
 
+  # Specify the state version for Home Manager.
+  home.stateVersion = "23.05"; # Set this to the correct version
+
   # The home.packages option allows you to install Nix packages into your environment.
   home.packages = [
     pkgs.hello
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage plain files is through 'home.file'.
-  home.file = {
-    ".screenrc".source = ./dotfiles/screenrc;
-  };
 
   # Home Manager can also manage your environment variables through 'home.sessionVariables'. These will be explicitly sourced when using a shell provided by Home Manager.
   home.sessionVariables = {
@@ -27,3 +26,4 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
+

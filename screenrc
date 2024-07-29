@@ -1,0 +1,35 @@
+# Enable logging
+logfile /var/log/screenlog.%t
+logtstamp
+
+# Set default terminal type
+termcapinfo xterm* ti@:te@
+
+# Set screen's default title
+hardstatus alwayslastline
+hardstatus string "%{= kw}%-w%{= kG} %n%f %t%{-}%+w %={ %Y-%m-%d %H:%M:%S }"
+
+# Enable screen's status line
+caption always "%{= kw}%-w%{= kG} %n%f %t%{-}%+w %={ %Y-%m-%d %H:%M:%S }"
+
+# Bindings for common commands
+bind c screen  # Create new window
+bind n next    # Switch to next window
+bind p prev    # Switch to previous window
+bind d detach  # Detach from screen session
+
+# Enable copy mode
+bind PageUp copy
+bind PageDown paste
+bind v paste
+
+# Custom key bindings
+bindKey F12 screen  # Create a new screen with F12 key
+bindKey C-c clear   # Clear the current screen with Ctrl+c
+
+# Use 256-color mode
+deftermcapinfo xterm* ti@:te@
+
+# Set default window name
+shelltitle "$ | bash"
+
