@@ -13,7 +13,7 @@
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
-      swiss = nixpkgs.lib.nixosSystem {
+      prague = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
