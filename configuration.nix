@@ -118,8 +118,6 @@
     cider
     localsend
     bluemail
-    glib
-    gtk4
     nixpkgs-fmt
     nixd
     discord
@@ -136,7 +134,9 @@
     github-desktop
     wpsoffice
     docker_24
-    zoom
+    zoom-us
+    corefonts
+    vistafonts
   ];
 
   # Firewall settings
