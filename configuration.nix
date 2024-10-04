@@ -14,7 +14,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname
-  networking.hostName = "prague";
+  networking.hostName = "nixos";
 
   # Configure Nix garbage collection
   nix.gc = {
@@ -37,6 +37,8 @@
     enable = true;
     allowReboot = false;
   };
+  
+  
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -137,6 +139,9 @@
     zoom-us
     corefonts
     vistafonts
+    brave
+    neovim
+    stremio
   ];
 
   # Firewall settings
