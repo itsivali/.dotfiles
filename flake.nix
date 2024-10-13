@@ -11,6 +11,7 @@
 
   outputs = { self, nixpkgs, home-manager, ... }: let
     system = "x86_64-linux";
+    pkgs = import nixpkgs { inherit system; };
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -40,13 +41,13 @@
 
     devShells = {
       default = pkgs.mkShell {
-        buildInputs = with nixpkgs; [
-          vim
-          google-chrome
-          spotify
-          wget
-          ffmpeg
-          vlc
+        buildInputs = [
+          pkgs.vim
+          pkgs.google-chrome
+          pkgs.spotify
+          pkgs.wget
+          pkgs.ffmpeg
+          pkgs.vlc
         ];
         shellHook = ''
           echo "Welcome to your dev environment"
