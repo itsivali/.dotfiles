@@ -1,30 +1,18 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./prague-shell.nix
+  home.username = "willis";
+  home.homeDirectory = "/home/willis";
+  home.stateVersion = "24.05";  # Required for Home Manager
+
+  # Example Home Manager configuration
+  home.packages = [
+    pkgs.hello
   ];
 
-  home-manager.users.willis = { pkgs, ... }: {
-    # Home Manager needs information about the user and home directory.
-    home.username = "willis";
-    home.homeDirectory = "/home/willis";
-
-    # Specify the state version for Home Manager.
-    home.stateVersion = "23.05"; # Set this to the correct version
-
-    # Install packages into the home environment.
-    home.packages = [
-      pkgs.hello
-    ];
-
-    # Manage environment variables through Home Manager.
-    home.sessionVariables = {
-      EDITOR = "code";
-    };
-
-    # Let Home Manager install and manage itself.
-    programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
+  home.sessionVariables = {
+    EDITOR = "vim";
   };
 }
 
