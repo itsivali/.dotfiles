@@ -37,5 +37,21 @@
         ];
       };
     };
+
+    devShells = {
+      default = pkgs.mkShell {
+        buildInputs = with nixpkgs; [
+          vim
+          google-chrome
+          spotify
+          wget
+          ffmpeg
+          vlc
+        ];
+        shellHook = ''
+          echo "Welcome to your dev environment"
+        '';
+      };
+    };
   };
 }
