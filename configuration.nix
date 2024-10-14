@@ -40,16 +40,45 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # Enable Wayland and set up Hyprland as the window manager
   services.xserver.enable = true;
-  services.xserver.displayManager.startx.enable = true; # Enable startx for manual session start
+  services.xserver.displayManager.startx.enable = true;
 
-  # Enable Hyperland
-  services.hyperland.enable = true;
+  environment.systemPackages = with pkgs; [
+    vim
+    wget
+    google-chrome
+    vscode
+    python3
+    nodejs_22
+    signal-desktop
+    telegram-desktop
+    bitwarden-desktop
+    git
+    spotify
+    mpv
+    fastfetch
+    filezilla
+    htop
+    obsidian
+    cider
+    localsend
+    bluemail
+    nixpkgs-fmt
+    nixd
+    discord
+    pipenv
+    ranger
+    docker
+    gh
+    anydesk
+    brave
+    neovim
+    hyprland
+  ];
 
-  # CUPS printing service
   services.printing.enable = true;
 
-  # Enable PipeWire for sound
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -74,53 +103,6 @@
   programs.firefox.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    google-chrome
-    vscode
-    python3
-    nodejs_22
-    nodePackages_latest.npm
-    signal-desktop
-    telegram-desktop
-    gnome-extension-manager
-    bitwarden-desktop
-    git
-    spotify
-    mpv
-    fastfetch
-    filezilla
-    gnome-tweaks
-    htop
-    obsidian
-    cider
-    localsend
-    bluemail
-    nixpkgs-fmt
-    nixd
-    discord
-    streamlink-twitch-gui-bin
-    pipenv
-    python312Packages.pip
-    postman
-    python312Packages.pytest
-    ranger
-    docker
-    gh
-    gh-notify
-    anydesk
-    github-desktop
-    wpsoffice
-    docker
-    zoom-us
-    corefonts
-    vistafonts
-    brave
-    neovim
-    stremio
-  ];
 
   networking.firewall = {
     allowedTCPPorts = [ 80 443 53317 ];
