@@ -137,6 +137,7 @@
     zoom-us
     corefonts
     vistafonts
+    vivaldi
   ];
 
   # Firewall settings
