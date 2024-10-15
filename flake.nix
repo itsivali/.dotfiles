@@ -14,7 +14,7 @@
     pkgs = import nixpkgs { inherit system; };
   in {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      prague = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
