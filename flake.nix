@@ -14,7 +14,7 @@
     pkgs = import nixpkgs { inherit system; };
   in {
     nixosConfigurations = {
-      prague = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
@@ -22,10 +22,7 @@
             imports = [ home-manager.nixosModules.home-manager ];
 
             home-manager.users.willis = { pkgs, ... }: {
-<<<<<<< HEAD
-              home.stateVersion = "24.05"; 
-=======
->>>>>>> parent of 538a506 (refactored files)
+            home.stateVersion = "24.05"; 
               imports = [ ./home.nix ];
             };
           }
