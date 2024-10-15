@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
+{config, pkgs, ... }:
 
 {
-  # Enable and configure Bash
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -10,7 +9,6 @@
     };
   };
 
-  # Enable and configure Zsh
   programs.zsh = {
     enable = true;
     shellAliases = {

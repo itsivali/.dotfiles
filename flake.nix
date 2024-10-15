@@ -22,7 +22,10 @@
             imports = [ home-manager.nixosModules.home-manager ];
 
             home-manager.users.willis = { pkgs, ... }: {
+<<<<<<< HEAD
               home.stateVersion = "24.05"; 
+=======
+>>>>>>> parent of 538a506 (refactored files)
               imports = [ ./home.nix ];
             };
           }
