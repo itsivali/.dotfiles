@@ -151,8 +151,4 @@
 
   # Enable experimental features in Nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> parent of 538a506 (refactored files)
