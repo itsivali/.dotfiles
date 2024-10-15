@@ -140,6 +140,7 @@
     brave
     neovim
     stremio
+    dconf-editor
   ];
 
   # Firewall settings
