@@ -21,8 +21,8 @@
           {
             imports = [ home-manager.nixosModules.home-manager ];
 
-            home-manager.users.willis = { pkgs, ... }: {
-            home.stateVersion = "24.05"; 
+            home-manager.users.willis = {
+              home.stateVersion = "24.05";
               imports = [ ./home.nix ];
             };
           }
@@ -33,6 +33,7 @@
     homeConfigurations = {
       willis = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { inherit system; };
+        home.stateVersion = "24.05"; # Ensure this matches your system state version
         modules = [
           ./home.nix
         ];
