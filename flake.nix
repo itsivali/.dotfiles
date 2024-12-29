@@ -22,7 +22,7 @@
             imports = [ home-manager.nixosModules.home-manager ];
 
             home-manager.users.willis = {
-              home.stateVersion = "24.05";
+              home.stateVersion = "24.11";
               imports = [ ./home.nix ];
             };
           }
