@@ -33,7 +33,7 @@
     homeConfigurations = {
       willis = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { inherit system; };
-        home.stateVersion = "24.05"; # Ensure this matches your system state version
+        home.stateVersion = "24.11"; # Ensure this matches your system state version
         modules = [
           ./home.nix
         ];
