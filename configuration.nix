@@ -148,7 +148,7 @@
   };
 
   # NixOS release version
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 
   # Enable experimental features in Nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
