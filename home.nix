@@ -3,7 +3,7 @@
 {
   home.username = "willis";
   home.homeDirectory = "/home/willis";
-  home.stateVersion = "24.05";  # Required for Home Manager
+  home.stateVersion = "24.11";  # Required for Home Manager
 
   # Example Home Manager configuration
   home.packages = [
