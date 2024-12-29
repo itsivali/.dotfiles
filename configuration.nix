@@ -103,7 +103,7 @@
     python3
     nodejs
     nodePackages_latest.npm
-    signal-desktop
+    boxduddy
     telegram-desktop
     gnome-extension-manager
     bitwarden
@@ -137,7 +137,7 @@
     zoom-us
     corefonts
     vistafonts
-    vivaldi
+    
   ];
 
   # Firewall settings
